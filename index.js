@@ -23,11 +23,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+// const db = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: '',
+//   database: 'funstaydb',
+// });
+
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'funstaydb',
+  user: 'nodeuser',
+  password: 'Root@1234',
+  database: 'funstay_db',
 });
 
 db.connect((err) => {
